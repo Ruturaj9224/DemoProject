@@ -42,4 +42,9 @@ public class LoginSteps {
     	assertTrue(loginPage.verifytitleofloginpage());
     }
     
+    @Then("verify the presence of logo")
+    public void verify_the_presence_of_logo() {
+        assertTrue(loginPage.verifylogo());
+    }
+    
 }

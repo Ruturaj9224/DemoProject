@@ -21,6 +21,10 @@ public class LoginPage {
     
     @FindBy(xpath = "//h3[@data-test='error']")
     WebElement Errormessage;
+    
+    @FindBy(css = "div[class='login_logo']")
+    WebElement logo;
+    
 
     public void login(String username, String password) {
         usernameField.sendKeys(username);
@@ -40,6 +44,10 @@ public class LoginPage {
 		String expected = "Swag Labs";
 		String actual =BaseClass.driver.getTitle();
 		return expected.equals(actual);
+	}
+
+	public boolean verifylogo() {
+		return logo.isDisplayed();
 	}
 	
 	

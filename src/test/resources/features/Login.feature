@@ -29,3 +29,8 @@ Feature: SauceDemo Login
     Scenario: Verify the title of loginpage
     Given  User is on SauceDemo login page
     Then   verify the title of the loginpage is as per the specification 
+    
+    @TC007
+   Scenario: verify the Swag labs logo is displyed on login page
+    Given User is on SauceDemo login page
+    Then verify the presence of logo
