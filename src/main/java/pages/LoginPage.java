@@ -26,12 +26,7 @@ public class LoginPage {
     WebElement logo;
     
 
-//    public void login(String username, String password) {
-//        usernameField.sendKeys(username);
-//        passwordField.sendKeys(password);
-//        loginButton.click();
-//    }
-//    
+  
     public void enterUsername(String username) {
         usernameField.sendKeys(username);
     }
@@ -58,5 +53,11 @@ public class LoginPage {
 		return logo.isDisplayed();
 	}
 	
+//  public void login(String username, String password) {
+//  usernameField.sendKeys(username);
+//  passwordField.sendKeys(password);
+//  loginButton.click();
+//}
+//
 	
 }
