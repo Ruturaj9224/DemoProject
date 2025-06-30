@@ -26,10 +26,18 @@ public class LoginPage {
     WebElement logo;
     
 
-    public void login(String username, String password) {
+//    public void login(String username, String password) {
+//        usernameField.sendKeys(username);
+//        passwordField.sendKeys(password);
+//        loginButton.click();
+//    }
+//    
+    public void enterUsername(String username) {
         usernameField.sendKeys(username);
+    }
+    
+    public void enterPassword(String password) {
         passwordField.sendKeys(password);
-        loginButton.click();
     }
     
     public void logins() {

@@ -16,9 +16,15 @@ public class LoginSteps {
         BaseClass.driver.get("https://www.saucedemo.com/");
     }
 
-    @When("User enters username {string} and password {string}")
-    public void user_enters_credentials(String username, String password) {
-        loginPage.login(username, password);
+    
+    @When("User enters username {string}")
+    public void user_enters_username(String username) {
+    	 loginPage.enterUsername(username);
+    }
+
+    @When("password {string}")
+    public void password(String password) {
+    	loginPage.enterPassword(password);
     }
 
     @Then("User should be logged in successfully")
@@ -46,5 +52,10 @@ public class LoginSteps {
     public void verify_the_presence_of_logo() {
         assertTrue(loginPage.verifylogo());
     }
+    
+//  @When("User enters username {string} and password {string}")
+//  public void user_enters_credentials(String username, String password) {
+//      loginPage.login(username, password);
+//  }
     
 }
