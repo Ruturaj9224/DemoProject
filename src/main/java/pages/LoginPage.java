@@ -20,12 +20,13 @@ public class LoginPage {
     WebElement loginButton;
     
     @FindBy(xpath = "//h3[@data-test='error']")
-    WebElement Errormessage;
+    WebElement errormessage;
     
     @FindBy(css = "div[class='login_logo']")
     WebElement logo;
     
-
+    @FindBy(xpath = "//h4[text()='Accepted usernames are:']")
+    WebElement accepted_user;
   
     public void enterUsername(String username) {
         usernameField.sendKeys(username);
@@ -40,7 +41,7 @@ public class LoginPage {
     }
 
 	public boolean isloginErrormessageDisplayed() {
-		return Errormessage.isDisplayed();
+		return errormessage.isDisplayed();
 	}
 
 	public boolean verifytitleofloginpage() {
@@ -51,6 +52,10 @@ public class LoginPage {
 
 	public boolean verifylogo() {
 		return logo.isDisplayed();
+	}
+
+	public boolean verify_The_AUA_text() {
+		return accepted_user.isDisplayed();
 	}
 	
 //  public void login(String username, String password) {

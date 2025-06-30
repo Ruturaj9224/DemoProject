@@ -53,6 +53,13 @@ public class LoginSteps {
         assertTrue(loginPage.verifylogo());
     }
     
+    
+    @Then("verify the accepted users are is displayed on page")
+    public void verify_the_accepted_users_are_is_displayed_on_page() {
+    	assertTrue(loginPage.verify_The_AUA_text());
+    }
+
+    
 //  @When("User enters username {string} and password {string}")
 //  public void user_enters_credentials(String username, String password) {
 //      loginPage.login(username, password);

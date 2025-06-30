@@ -62,3 +62,8 @@ Feature: SauceDemo Login
    Scenario: verify the Swag labs logo is displyed on login page
     Given User is on SauceDemo login page
     Then verify the presence of logo
+    
+    @TC010
+    Scenario: verify the "Accepted users are:" text
+    Given User is on SauceDemo login page
+    Then verify the accepted users are is displayed on page
